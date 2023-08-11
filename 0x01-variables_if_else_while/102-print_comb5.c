@@ -11,34 +11,23 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int i, j, l, k;
+	int i, j;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i < 100 ; i++)
 	{
-		for (j = 0 ; j < 9 ; j++)
+		for (j = 0 ; j < 100 ; j++)
 		{
-			for (l = 0 ; l < 10 ; l++)
-			{
-				for (k = 0 ; k < 10 ; k++)
-				{
-					if (i > l)
-						continue;
-					if (i == l)
-					{
-						if (j >= k)
-							continue;
-					}
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(l + '0');
-					putchar(k + '0');
-					if (i == 9 && j == 8 && l == 9 && k == 9)
-						continue;
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			if (i >= j)
+				continue;
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
+			if (i == 98 && j == 99)
+				continue;
+			putchar(' ');
+			putchar(',');
 		}
 	}
 	putchar('\n');

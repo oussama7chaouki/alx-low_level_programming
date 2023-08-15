@@ -6,13 +6,15 @@
  */
 int main(void)
 {
-	int i, prev1, prev2, prev3;
+	long int i, prev1, prev2, prev3;
 
 	prev1 = 1;
 	prev2 = 2;
 	for (i = 0; i < 50; i++)
 	{
-		printf("%d,", prev1);
+		printf("%lu", prev1);
+		if (i != 50)
+			printf(", ");
 		prev3 = prev2;
 		prev2 = prev1 + prev2;
 		prev1 = prev3;

@@ -13,7 +13,7 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		printf("%lu", prev1);
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 		prev3 = prev2;
 		prev2 = prev1 + prev2;

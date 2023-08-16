@@ -19,7 +19,7 @@ int main(void)
 		printf("%lu", sum);
 		printf(", ");
 		prev1 = prev2;
-		prev2 = sum;	
+		prev2 = sum;
 	}
 	prev1_half1 = prev1 / 10000000000;
 	prev2_half1 = prev2 / 10000000000;

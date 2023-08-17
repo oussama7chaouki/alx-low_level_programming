@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * mul - multiplies two integers.
+ * print_most_numbers - print digit except 2 and 4.
  */
 void print_most_numbers(void)
 {
@@ -10,7 +10,7 @@ void print_most_numbers(void)
 	for (i = 0; i < 10; i++)
 	{
 		if (i == 2 || i == 4)
-		       continue;	
+			continue;
 		_putchar('0' + i);
 	}
 	_putchar('\n');

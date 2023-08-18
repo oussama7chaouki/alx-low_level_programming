@@ -17,5 +17,5 @@ void print_number(int n)
 	{
 		print_number(rec / 10);
 	}
-	putchar('0' + rec % 10);
+	_putchar('0' + rec % 10);
 }

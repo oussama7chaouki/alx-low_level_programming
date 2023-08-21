@@ -1,8 +1,8 @@
 #include "main.h"
-/*
- * _atoi - Convert a string to an integer.
+/**
+ * _atoi - Converts a string to an integer
  * @s:string
- * Return : 0 if no number or the number if exist
+ * Return: 0 if no number or the number if exist
  */
 int _atoi(char *s)
 {

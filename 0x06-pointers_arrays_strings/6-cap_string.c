@@ -12,7 +12,7 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		for (l = 0; l < 12; l++)
+		for (l = 0; l <= 12; l++)
 		{
 			if (str[i] == sep[l])
 			{

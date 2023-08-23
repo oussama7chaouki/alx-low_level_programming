@@ -12,6 +12,15 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
+		if (i == 0)
+		{
+			j = str[i];
+			if (j >= 97 && j <= 122)
+			{
+				j -= 32;
+				str[i] = j;
+			}
+		}
 		for (l = 0; l <= 12; l++)
 		{
 			if (str[i] == sep[l])
@@ -22,6 +31,7 @@ char *cap_string(char *str)
 					j -= 32;
 					str[i + 1] = j;
 				}
+				break;
 			}
 		}
 		i++;

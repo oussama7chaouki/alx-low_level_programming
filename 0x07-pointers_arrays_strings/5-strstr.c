@@ -9,8 +9,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i = 0, j = 0, l, exist = 0;
 
-	if (!needle[0])
-		return (haystack + i);
 	while (haystack[i] != '\0')
 	{
 		if (needle[0] == haystack[i])
@@ -26,9 +24,13 @@ char *_strstr(char *haystack, char *needle)
 				j++;
 			}
 		}
-		if (exist == 1)
+		if (needle[j])
+		{
+			i++;
+			j = 0;
+		}
+		else
 			return (haystack + i);
-		i++;
 	}
 	return (0);
 }

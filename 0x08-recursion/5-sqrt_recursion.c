@@ -10,15 +10,14 @@
 */
 int _sqrt_binary_search(int n, int inf, int sup)
 {
-	int half, half_squared;
+	long int half, half_squared;
 
+	if(inf >= sup)
+		return (-1);
 	half = (sup + inf) / 2;
 	half_squared = half * half;
-
 	if (half_squared == n)
 		return (half);
-	if (inf == sup)
-		return (-1);
 	if (half_squared < n)
 		return (_sqrt_binary_search(n, half + 1, sup));
 	else

@@ -22,12 +22,12 @@ int compare_strings(char *string1, char *string2, int index1, int index2)
 }
 
 /**
- * wildcard_match - determine if two strings match considering wildcards.
- * @str1: the first string.
- * @str2: the second string.
+ * wildcmp - determine if two strings match considering wildcards.
+ * @s1: the first string.
+ * @s2: the second string.
  * Return: 1 if strings match, taking wildcards into account.
  */
-int wildcard_match(char *str1, char *str2)
+int wildcmp(char *s1, char *s2)
 {
 	return (compare_strings(str1, str2, 0, 0));
 }

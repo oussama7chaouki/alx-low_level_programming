@@ -12,7 +12,7 @@ int _sqrt_binary_search(int n, int inf, int sup)
 {
 	long int half, half_squared;
 
-	if(inf >= sup)
+	if (inf >= sup)
 		return (-1);
 	half = (sup + inf) / 2;
 	half_squared = half * half;

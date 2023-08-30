@@ -29,5 +29,5 @@ int compare_strings(char *string1, char *string2, int index1, int index2)
  */
 int wildcmp(char *s1, char *s2)
 {
-	return (compare_strings(str1, str2, 0, 0));
+	return (compare_strings(s1, s2, 0, 0));
 }

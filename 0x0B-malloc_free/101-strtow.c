@@ -6,12 +6,11 @@ void create_word(char **, char *, int, int, int);
 /**
  * strtow - splits a string into words.
  * @str: the string
- *
  * Return: returns a pointer to an array of strings (words)
  */
 char **strtow(char *str)
 {
-	int i, len, word_count = 0;
+	int i, len, word_length = 0, index_word;
 	char **words;
 
 	if (str == NULL || str[0] == '\0')
@@ -23,18 +22,16 @@ char **strtow(char *str)
 		{
 			len++;
 			if (i == 0 || str[i - 1] == ' ')
-				word_count++;
+				word_length++;
 		}
 	}
 
 	if (len == 0)
 		return (NULL);
 
-	words = (char **)malloc(sizeof(char *) * (word_count + 1));
+	words = (char **)malloc(sizeof(char *) * (word_length + 1));
 	if (words == NULL)
 		return (NULL);
-
-	int word_index = 0;
 
 	for (i = 0; str[i]; i++)
 	{
@@ -48,12 +45,12 @@ char **strtow(char *str)
 				word_len++;
 				i++;
 			}
-			create_word(words, str, start, start + word_len, word_index);
-			word_index++;
+			create_word(words, str, start, start + word_len, index_word);
+			index_word++;
 		}
 	}
 
-	words[word_count] = NULL;
+	words[word_length] = NULL;
 	return (words);
 }
 

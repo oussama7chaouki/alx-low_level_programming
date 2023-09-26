@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_listint - prints all the elements of a listint_t list.
+ * print_listint - return the number of the elements of a linked list.
  * @h: head of linklist node
  * Return: the number of nodes
  */
-size_t print_listint(const listint_t *h)
+size_t  listint_len(const listint_t *h)
 {
 	size_t i = 0;
 
